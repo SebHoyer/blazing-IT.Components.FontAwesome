@@ -1,0 +1,45 @@
+﻿<i class="@IconCssClass"></i>
+
+@code
+{
+    private string IconCssClass
+    {
+        get
+        {
+            string style = $"{CssClassAttribute.GetCssClass(Style)}";
+            string fixedWidth = $"{(FixedWidth ? "fa-fw" : string.Empty )}";
+            string name = $"{CssClassAttribute.GetCssClass(Name)}";
+            string size = $"{CssClassAttribute.GetCssClass(Size)}";
+            string rotate = $"{CssClassAttribute.GetCssClass(Rotate)}";
+            string spin = $"{(Spin ? "fa-spin" : string.Empty)}";
+            string swapOpacity = $"{(SwapOpacity ? "fa-swap-opacity" : string.Empty)}";
+
+            return $"{style} {fixedWidth} {name} {size} {rotate} {spin} {swapOpacity} {CssClass}".Trim().Replace("  ", " ");
+        }
+    }
+
+    [Parameter()]
+    public FaIconStyle Style { get; set; } = FaIconStyle.DuoTone;
+
+    [Parameter()]
+    public bool FixedWidth { get; set; } = false;
+
+    [Parameter()]
+    public FaIconName Name { get; set; }
+
+    [Parameter()]
+    public FaIconSize Size { get; set; } = FaIconSize.X1;
+
+    [Parameter()]
+    public FaIconRotate Rotate { get; set; } = FaIconRotate.None;
+
+    [Parameter()]
+    public bool Spin { get; set; } = false;
+
+    [Parameter()]
+    public bool SwapOpacity { get; set; } = false;
+
+    [Parameter()]
+    public string CssClass { get; set; } = string.Empty;
+
+}
