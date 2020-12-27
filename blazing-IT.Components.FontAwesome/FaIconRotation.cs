@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace blazing_IT.Components.FontAwesome
 {
-    public enum FaIconRotate
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum FaIconRotation
     {
         [CssClass("")]
         None,

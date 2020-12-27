@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace blazing_IT.Components.FontAwesome
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public enum FaIconSize
     {
         [CssClass("fa-xs")]

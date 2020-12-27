@@ -1,8 +1,11 @@
-﻿<i class="@IconCssClass"></i>
+﻿<i class="@IconCssClasses"></i>
 
 @code
 {
-    private string IconCssClass
+    /// <summary>
+    /// Assembles the CSS classes from the parameters
+    /// </summary>
+    private string IconCssClasses
     {
         get
         {
@@ -10,19 +13,24 @@
             string fixedWidth = $"{(FixedWidth ? "fa-fw" : string.Empty )}";
             string name = $"{CssClassAttribute.GetCssClass(Name)}";
             string size = $"{CssClassAttribute.GetCssClass(Size)}";
-            string rotate = $"{CssClassAttribute.GetCssClass(Rotate)}";
-            string spin = $"{(Spin ? "fa-spin" : string.Empty)}";
+            string rotation = $"{CssClassAttribute.GetCssClass(Rotation)}";
+            string animation = $"{CssClassAttribute.GetCssClass(Animation)}";
             string swapOpacity = $"{(SwapOpacity ? "fa-swap-opacity" : string.Empty)}";
 
-            return $"{style} {fixedWidth} {name} {size} {rotate} {spin} {swapOpacity} {CssClass}".Trim().Replace("  ", " ");
+            string cssClasses = $"{style} {fixedWidth} {name} {size} {rotation} {animation} {swapOpacity} {CssClass}";
+
+            cssClasses.Trim();
+            while(cssClasses.Contains("  "))
+            {
+                cssClasses = cssClasses.Replace("  ", " ");
+            }
+
+            return cssClasses;
         }
     }
 
     [Parameter()]
     public FaIconStyle Style { get; set; } = FaIconStyle.DuoTone;
-
-    [Parameter()]
-    public bool FixedWidth { get; set; } = false;
 
     [Parameter()]
     public FaIconName Name { get; set; }
@@ -31,10 +39,13 @@
     public FaIconSize Size { get; set; } = FaIconSize.X1;
 
     [Parameter()]
-    public FaIconRotate Rotate { get; set; } = FaIconRotate.None;
+    public FaIconRotation Rotation { get; set; } = FaIconRotation.None;
 
     [Parameter()]
-    public bool Spin { get; set; } = false;
+    public FaIconAnimation Animation { get; set; } = FaIconAnimation.None;
+
+    [Parameter()]
+    public bool FixedWidth { get; set; } = false;
 
     [Parameter()]
     public bool SwapOpacity { get; set; } = false;
