@@ -9,7 +9,7 @@
     <Company>blazing-IT</Company>
     <PackageTags>Blazor, FontAwesome</PackageTags>
     <RepositoryUrl>https://github.com/SebHoyer/blazing-IT.FontAwesome</RepositoryUrl>
-    <Version>1.0.0.4</Version>
+    <Version>1.0.0.5</Version>
     <Description>Warps the FoneAwesome icons into a cool Blazor component.</Description>
   </PropertyGroup>
   

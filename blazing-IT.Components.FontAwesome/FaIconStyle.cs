@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 namespace blazing_IT.Components.FontAwesome
 {
     /// <summary>
-    /// 
-    /// <script type = "text/javascript" src="_content/blazing-IT.Components.Fontawesome/js/all.min.js"></script>
+    /// All FontAwesome style classes as enum
     /// </summary>
+    /// <remarks>
+    /// Offical documentation about FontAwesome styles:
+    /// https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use
     public enum FaIconStyle
     {
         /// <summary>

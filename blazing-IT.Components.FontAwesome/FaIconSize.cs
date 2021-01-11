@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 namespace blazing_IT.Components.FontAwesome
 {
     /// <summary>
-    /// 
+    /// All FontAwesome sizing classes as enum
     /// </summary>
+    /// <remarks>
+    /// Offical documentation about FontAwesome sizing:
+    /// https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons
+    /// </remarks>
     public enum FaIconSize
     {
         [CssClass("fa-xs")]

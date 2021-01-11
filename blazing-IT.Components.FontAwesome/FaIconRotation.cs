@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 namespace blazing_IT.Components.FontAwesome
 {
     /// <summary>
-    /// 
+    /// All FontAwesome rotation classes as enum
     /// </summary>
+    /// <remarks>
+    /// Offical documentation about FontAwesome rotation:
+    /// https://fontawesome.com/how-to-use/on-the-web/styling/rotating-icons
+    /// </remarks>
     public enum FaIconRotation
     {
         [CssClass("")]

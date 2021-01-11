@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 namespace blazing_IT.Components.FontAwesome
 {
     /// <summary>
-    /// 
+    /// All FontAwesome icon classes as enum
     /// </summary>
+    /// <remarks>
+    /// Full list of icons with examples: 
+    /// https://fontawesome.com/icons?d=gallery
+    /// </remarks>
     public enum FaIconName
     {
         [CssClass("fa-500px")]
